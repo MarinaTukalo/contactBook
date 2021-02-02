@@ -1,6 +1,17 @@
-<h2>Contact list</h2>
-<ul>
-    <li *ngFor="let contact of contactData | async">
-        {{contact.fname}}
-    </li>
-</ul>
+<h2 class="my-4">Contact list</h2>
+
+<div class="card" *ngFor="let contact of contactData$ | async; let i=index;">
+    <div class="card-header" id="{{contact.id}}">
+        <button class="btn btn-link btn-block text-left" type="button" (click)="toggleBtn[i]=!toggleBtn[i]">
+            <h4>{{contact.fname}} {{contact.lname}} </h4>
+        </button>
+    </div>
+
+    <!-- div with more info, toggle button -->
+    <div class="toggleBtn{{contact.id}}" *ngIf="toggleBtn[i]">
+        <div class="card-body">
+            <p>{{contact.phone}} | {{contact.email}}</p>
+            <p>{{contact.address}}</p>
+        </div>
+    </div>
+</div>

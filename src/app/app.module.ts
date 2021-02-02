@@ -6,6 +6,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { StoreModule } from '@ngrx/store';
 import { ContactReducer } from './state/contact.reducer';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -15,6 +17,7 @@ import { ContactReducer } from './state/contact.reducer';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     StoreModule.forRoot({
       contact: ContactReducer,
     })
