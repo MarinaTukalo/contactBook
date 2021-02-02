@@ -1,1 +1,6 @@
-<p>contact-list works!</p>
+<h2>Contact list</h2>
+<ul>
+    <li *ngFor="let contact of contactData | async">
+        {{contact.fname}}
+    </li>
+</ul>

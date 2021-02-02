@@ -1,1 +1,14 @@
-<p>contact-form works!</p>
+<h2>Contact form</h2>
+<form (ngSubmit)="addData()">
+    <h4>First Name</h4>
+    <input type="text" name="fname" />
+    <h4>Last Name</h4>
+    <input type="text" name="lname" />
+    <h4>Phone Number</h4>
+    <input type="text" name="phone" />
+    <h4>Email</h4>
+    <input type="text" name="email" />
+    <h4>Address</h4>
+    <input type="text" name="address" />
+    <button type="submit">Add new contact</button>
+</form>
