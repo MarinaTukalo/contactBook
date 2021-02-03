@@ -1,5 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
+import { FormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 
 import { ContactFormComponent } from './contact-form.component';
@@ -11,7 +13,12 @@ describe('ContactFormComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ ContactFormComponent ],
-      imports: [StoreModule.forRoot({})]
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
+      ],
+      imports: [
+        FormsModule,
+        StoreModule.forRoot({})]
     })
     .compileComponents();
   }));

@@ -9,6 +9,8 @@ import { AppState } from '../state/contact.reducer';
   templateUrl: './contact-list.component.html',
   styleUrls: ['./contact-list.component.scss']
 })
+
+
 export class ContactListComponent implements OnInit {
   toggleBtn: any = {};
   contactData$: Observable<Array<ContactData>>;
