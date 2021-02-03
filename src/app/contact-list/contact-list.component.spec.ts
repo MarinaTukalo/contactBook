@@ -3,6 +3,7 @@ import { StoreModule } from '@ngrx/store';
 import { ContactReducer } from '../state/contact.reducer';
 
 import { ContactListComponent } from './contact-list.component';
+import { By } from '@angular/platform-browser';
 
 describe('ContactListComponent', () => {
   let component: ContactListComponent;
@@ -27,5 +28,11 @@ describe('ContactListComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it(`should have as a title 'Contact list'`, () => {
+    const title = fixture.debugElement.query(By.css('h2'));
+    const titleHtmlElement: HTMLHeadElement = title.nativeElement;
+    expect(titleHtmlElement.textContent).toEqual('Contact list');
   });
 });
