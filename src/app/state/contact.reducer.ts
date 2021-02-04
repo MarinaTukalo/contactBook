@@ -15,8 +15,6 @@ export function ContactReducer(
         case Action.ADD_DATA:
             console.log(action.type, action.payload);
             return [...state, action.payload];
-        case Action.LOAD_DATA:
-                return state;
         default:
             return state = initialState;
     }

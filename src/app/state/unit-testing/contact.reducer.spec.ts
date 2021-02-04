@@ -1,7 +1,6 @@
 import * as fromReducer from '../contact.reducer';
 import * as fromActions from '../contact.actions';
 import { ContactData } from '../contact.model';
-import { AppState } from '../contact.reducer';
 
 describe('State > Reducer',()=>{
      it('should load data', ()=>{
