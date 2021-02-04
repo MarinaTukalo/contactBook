@@ -10,7 +10,6 @@ import { AppState } from '../state/contact.reducer';
   styleUrls: ['./contact-list.component.scss']
 })
 
-
 export class ContactListComponent implements OnInit {
   toggleBtn: any = {};
   contactData$: Observable<Array<ContactData>>;
@@ -18,7 +17,6 @@ export class ContactListComponent implements OnInit {
   constructor(private store: Store<AppState>) { }
 
   ngOnInit(): void {
-    this.contactData$ = this.store.select(store => store.contact);
+    this.contactData$ = this.store.select(store => store.contact); 
   }
-
 }

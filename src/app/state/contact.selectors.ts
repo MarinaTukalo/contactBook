@@ -1,10 +1,8 @@
-import { createFeatureSelector, createSelector } from '@ngrx/store';
-import * as fromReducer from './contact.reducer';
+import { createSelector } from '@ngrx/store';
+import { ContactData } from './contact.model';
+import { AppState } from './contact.reducer';
 
-const getContactStatus = createFeatureSelector<fromReducer.AppState>(
-    fromReducer.contactFeatureKey
-);
-
-export const selectContactList = createSelector(
-    getContactStatus, AppState => AppState.contact
-);
+export const selectContacts = createSelector(
+    (state:AppState) => state.contact,
+    (contact: Array<ContactData>) => contact
+    );
