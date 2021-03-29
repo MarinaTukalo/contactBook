@@ -1,6 +1,20 @@
+<p align="center">
+  <img width="700" src="layout.png">
+</p>
+
 # ContactBook
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
+A simple contact book application that was generated with **Angular CLI v.9.1.9** and the state management library **ngrx/store**.
+NgRx/Store keeps all application data in a single JS object and gives a predictable global data state at any given point in time. 
+
+<p>The application consist out of three parts:</p>
+<ul>
+  <li>A form to add new contact details</li>
+  <li>A table displaying a simplified list of all recorded contacts</li>
+  <li>A contact detail view displaying the full contact details of the currently selected contact using toggle method.</li>
+</ul>
+
+The application contains **karma/jasmine unit tests**.
 
 ## Development server
 
